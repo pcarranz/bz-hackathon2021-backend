@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins = { "http://localhost:3000" })
-public class B2Buckets {
+public class B2BucketController {
 
     @Autowired
     private B2BucketService bucketService;

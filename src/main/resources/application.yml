@@ -1,0 +1,12 @@
+# actuator config
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,configprops,metrics,threaddump"
+        exclude: "env,beans"
+
+
+b2:
+  appKey: <APP_KEY>
+  appKeyId: <APP_KEY_ID>
