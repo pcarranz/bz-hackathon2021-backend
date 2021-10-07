@@ -1,6 +1,6 @@
-package com.example.hackathondemo;
+package com.example.hackathondemo.controller;
 
-import com.example.hackathondemo.bz.ProductListService;
+import com.example.hackathondemo.service.ProductListService;
 import com.example.hackathondemo.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;

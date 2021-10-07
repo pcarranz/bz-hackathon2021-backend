@@ -1,4 +1,4 @@
-package com.example.hackathondemo.bz;
+package com.example.hackathondemo.service;
 
 import com.example.hackathondemo.entity.Product;
 import org.springframework.stereotype.Service;
