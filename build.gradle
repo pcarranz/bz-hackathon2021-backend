@@ -23,6 +23,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web:2.5.5'
 	implementation 'org.springframework.cloud:spring-cloud-starter-consul-all:3.0.4'
 	implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:3.0.4'
+	implementation 'com.backblaze.b2:b2-sdk-core:5.0.0'
+	implementation 'com.backblaze.b2:b2-sdk-httpclient:5.0.0'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools:2.5.5'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.5'
 }

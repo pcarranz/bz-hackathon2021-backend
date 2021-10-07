@@ -1,6 +1,7 @@
 package com.example.hackathondemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.ServiceInstance;
@@ -14,16 +15,25 @@ import java.util.Optional;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-public class HackathonDemoApplication {
+public class HackathonDemoApplication implements CommandLineRunner {
+
+	@Autowired
+	private ApplicationConfig appConfig;
 
 	public static void main(String[] args) {
-		SpringApplication.run(HackathonDemoApplication.class, args);
+		SpringApplication app = new SpringApplication(HackathonDemoApplication.class);
+		app.run();
+	}
+
+	public void run(String... args) throws Exception {
+		System.out.println("B2 App Key: " + appConfig.getAppKey());
+		System.out.println("B2 App Id: " + appConfig.getAppKeyId());
 	}
 
 }
 
 @RestController
-class ServiceDiscoveryController{
+class ServiceDiscoveryController {
 
 	@Autowired
 	private DiscoveryClient discoveryClient;
