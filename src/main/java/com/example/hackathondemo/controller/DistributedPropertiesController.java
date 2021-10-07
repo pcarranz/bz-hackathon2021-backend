@@ -1,7 +1,5 @@
-package com.example.hackathondemo;
+package com.example.hackathondemo.controller;
 
-import com.example.hackathondemo.entity.Switches;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -22,9 +20,6 @@ public class DistributedPropertiesController {
     @Value("${props.renderFilesButton}")
     boolean renderFilesButton;
 
-    @Autowired
-    private Switches properties;
-
     @GetMapping("/getConfigFromValue")
     public Map<String, Object> getConfigFromValue() {
         Map<String, Object> configMap = new HashMap<>();
@@ -33,8 +28,4 @@ public class DistributedPropertiesController {
         return configMap;
     }
 
-    @GetMapping("/getConfigFromProperty")
-    public String getConfigFromProperty() {
-        return properties.getTest();
-    }
 }
